@@ -48,3 +48,35 @@ function fixedNav() {
 }
 window.addEventListener('scroll', fixedNav)
 
+
+
+
+
+// SWIPER
+
+const whoSwiper = new Swiper('.who__swiper', {
+
+    navigation: {
+      nextEl: '.who-arrow-next',
+      prevEl: '.who-arrow-prev',
+    },
+  
+    // initialSlide: 3,
+    // centeredSlides: true,
+    grabCursor: true,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    
+    breakpoints: {
+      1450: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
+  });
