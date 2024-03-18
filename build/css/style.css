@@ -290,15 +290,18 @@ nav {
 }
 
 .nav__wrapper {
+  margin-top: 6px;
+  padding: 23px 0;
+  border-bottom: 1px solid rgba(55, 52, 52, 0.4);
+  border-top: 1px solid rgba(55, 52, 52, 0.4);
+}
+
+.nav__wrapper .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 6px;
-  padding: 23px 0;
-  border-bottom: 1px solid rgba(55, 52, 52, 0.4);
-  border-top: 1px solid rgba(55, 52, 52, 0.4);
 }
 
 .nav__item {
@@ -638,6 +641,7 @@ nav {
   background-color: #BA3620;
   color: #fff;
   font-weight: 600;
+  display: none;
 }
 
 .tips {
