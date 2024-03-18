@@ -57,26 +57,89 @@ window.addEventListener('scroll', fixedNav)
 const whoSwiper = new Swiper('.who__swiper', {
 
     navigation: {
-      nextEl: '.who-arrow-next',
-      prevEl: '.who-arrow-prev',
+        nextEl: '.who-arrow-next',
+        prevEl: '.who-arrow-prev',
     },
-  
+
+    loop: true,
+
     // initialSlide: 3,
     // centeredSlides: true,
     grabCursor: true,
     slidesPerView: 2,
     spaceBetween: 20,
-    
+
     breakpoints: {
-      1450: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      992: {
-        slidesPerView: 4,
-      },
-      768: {
-        slidesPerView: 3,
-      }
+        1450: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        768: {
+            slidesPerView: 3,
+        }
     }
-  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const detailsElements = document.querySelectorAll("details");
+
+    // Обработчик клика для закрытия details
+    document.addEventListener("click", function (event) {
+        const target = event.target;
+
+        // Проверяем, является ли клик вне details и summary
+        if (!target.closest("details") && !target.closest("summary")) {
+            // Скрываем все открытые details
+            detailsElements.forEach(function (details) {
+                details.removeAttribute("open");
+            });
+        } else if (target.tagName === "SUMMARY") {
+            // Если кликнули на summary, закрываем все открытые details,
+            // кроме того, на который был сделан клик
+            detailsElements.forEach(function (details) {
+                if (details !== target.parentElement) {
+                    details.removeAttribute("open");
+                }
+            });
+        }
+    });
+
+    // Обработчик для отслеживания наведения мыши на dropdown-menu
+    document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+        let timeoutId;
+
+        menu.addEventListener("mouseover", function () {
+            clearTimeout(timeoutId); // Очищаем таймер закрытия details
+        });
+
+        menu.addEventListener("mouseout", function () {
+            // Устанавливаем таймер закрытия details только если мышь не находится на самом details
+            if (!menu.closest("details").matches(":hover")) {
+                timeoutId = setTimeout(function () {
+                    menu.closest("details").removeAttribute("open");
+                }, 1000);
+            }
+        });
+    });
+
+    // Обработчик для автоматического закрытия details через 3 секунды
+    detailsElements.forEach(function (details) {
+        details.addEventListener("toggle", function () {
+            if (details.getAttribute("open")) {
+                // Устанавливаем таймер для автоматического закрытия через 3 секунды
+                setTimeout(function () {
+                    details.removeAttribute("open");
+                },1500);
+            }
+        });
+    });
+});
+
+
+
+

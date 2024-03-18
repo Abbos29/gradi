@@ -216,6 +216,7 @@ section {
 
 body {
   font-family: "Inter", sans-serif;
+  background: #f7f7ff;
 }
 
 body.locked {
@@ -239,6 +240,16 @@ body::-webkit-scrollbar-thumb {
 
 summary {
   list-style-type: none;
+}
+
+summary svg {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+details[open] summary svg {
+  rotate: 180deg;
 }
 
 details {
