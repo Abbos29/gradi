@@ -522,10 +522,12 @@ nav {
           box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
   position: relative;
+  width: 100%;
+  max-width: clamp(12.5rem, 6.481rem + 24.69vw, 28rem);
 }
 
 .hero__form input {
-  max-width: clamp(12.5rem, 6.481rem + 24.69vw, 25rem);
+  max-width: 600px;
   width: 100%;
   font-size: 17px;
   font-weight: 600;
@@ -1148,6 +1150,10 @@ nav {
   .hero__wrapper {
     grid-template-columns: 1fr;
     padding-bottom: 0;
+  }
+
+  .hero__form {
+    max-width: 70%;
   }
 
   .tips__wrapper {
