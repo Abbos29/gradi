@@ -616,20 +616,13 @@ nav {
 }
 
 .who {
+  padding-bottom: 0;
   /* .who__wrapper */
   /* .who__img */
 }
 
-.who__wrapper {
-  padding-bottom: 50px;
-}
-
 .who__img {
   width: 100%;
-}
-
-.who__swiper {
-  border-bottom: 1px solid lightgray;
 }
 
 .products {
@@ -931,7 +924,6 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 30px;
-  margin-bottom: 20px;
 }
 
 .footer__link {
@@ -1162,7 +1154,13 @@ nav {
   }
 
   .hero__form {
-    max-width: 70%;
+    max-width: 80%;
+  }
+
+  .hero__form button {
+    right: -70px;
+    padding-right: 24px;
+    font-size: 15px;
   }
 
   .tips__wrapper {
@@ -1181,12 +1179,9 @@ nav {
   }
 
   .hero__form input {
+    font-size: 15px;
     padding-left: 40px;
     background-position: 13px;
-  }
-
-  .who__wrapper {
-    padding-bottom: 20px;
   }
 
   .products__wrapper {
