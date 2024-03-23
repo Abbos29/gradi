@@ -2,25 +2,31 @@
 // Мобильное меню бургер
 function burgerMenu() {
     const burger = document.querySelector('.burger')
+    const burgerClose = document.querySelector('.btn-close')
     const menu = document.querySelector('.menu')
     const body = document.querySelector('body')
     burger.addEventListener('click', () => {
         if (!menu.classList.contains('active')) {
             menu.classList.add('active')
-            burger.classList.add('active-burger')
+            // burger.classList.add('active-burger')
             body.classList.add('locked')
         } else {
             menu.classList.remove('active')
-            burger.classList.remove('active-burger')
+            // burger.classList.remove('active-burger')
             body.classList.remove('locked')
         }
     })
     menu.addEventListener("click", (event) => {
-        if (event.target) {
+        if (!event.target) {
             menu.classList.remove('active')
-            burger.classList.remove('active-burger')
+            // burger.classList.remove('active-burger')
             body.classList.remove('locked')
         }
+    })
+    burgerClose.addEventListener('click', () => {
+        menu.classList.remove('active')
+        // burger.classList.remove('active-burger')
+        body.classList.remove('locked')
     })
     // Вот тут мы ставим брейкпоинт навбара
     window.addEventListener('resize', () => {
@@ -134,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Устанавливаем таймер для автоматического закрытия через 3 секунды
                 setTimeout(function () {
                     details.removeAttribute("open");
-                },1500);
+                }, 1500);
             }
         });
     });

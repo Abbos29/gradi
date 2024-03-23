@@ -271,6 +271,15 @@ details[open] summary svg {
 
 details {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 details .dropdown-menu {
@@ -408,18 +417,6 @@ nav {
       justify-content: space-around;
 }
 
-.nav__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
 .navbar {
   width: 100%;
   display: -webkit-box;
@@ -490,10 +487,159 @@ nav {
   gap: 30px;
 }
 
+.menu__top {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5555;
+  width: 100%;
+  background-color: #333333;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+
+.menu__top img {
+  width: 100px;
+}
+
+.menu__search {
+  background-image: url(../img//search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+  background-size: 14px;
+  margin: 26px 18px;
+  padding: 15px;
+  padding-left: 45px;
+  font-family: Inter;
+  font-size: 13.56px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
+  color: #000;
+  display: none;
+}
+
+.menu__search::-webkit-input-placeholder {
+  color: #7e7e7e;
+}
+
+.menu__search::-moz-placeholder {
+  color: #7e7e7e;
+}
+
+.menu__search:-ms-input-placeholder {
+  color: #7e7e7e;
+}
+
+.menu__search::-ms-input-placeholder {
+  color: #7e7e7e;
+}
+
+.menu__search::placeholder {
+  color: #7e7e7e;
+}
+
+.menu details {
+  display: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.menu details summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu details .dropdown-menu {
+  position: static !important;
+  border-top: 1px solid lightgray;
+  background-color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: none;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 10px 25px;
+}
+
+.menu details .dropdown-menu h3 {
+  display: none;
+}
+
+.menu details .dropdown-menu .links {
+  padding: 0;
+  gap: 5px;
+  text-transform: uppercase;
+}
+
+.menu details .dropdown-menu .links a {
+  font-weight: 400;
+}
+
 .menu__item-link {
   font-weight: 600;
   color: white;
   letter-spacing: 0.2px;
+}
+
+.follow-box {
+  margin-top: auto;
+  display: none;
+}
+
+.follow-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.follow-box .row {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 20px;
+  padding: 10px 30px;
+}
+
+.follow-box h4 {
+  border-top: 1px solid lightgray;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.6;
+  padding: 30px;
 }
 
 .burger {
@@ -1146,37 +1292,54 @@ nav {
 
 @media screen and (max-width: 991.98px) {
   .menu {
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: fixed;
-    background: #131418;
-    left: 0;
+    background: #fff;
+    left: -120%;
     top: 0;
     height: 100vh;
-    width: 100vw;
-    display: none;
-  }
-
-  .menu.active {
+    width: 90%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     pointer-events: all;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     z-index: 22;
-    -webkit-animation: fade 0.1s linear;
-            animation: fade 0.1s linear;
+    -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    gap: 0px;
+  }
+
+  .menu.active {
+    left: 0;
+    top: 0;
+    -webkit-box-shadow: 0 0 10px 140px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px 140px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .menu__search {
+    display: block;
+  }
+
+  .menu details {
+    display: block;
+  }
+
+  .menu .follow-box {
+    display: block;
   }
 
   .burger {
@@ -1184,12 +1347,12 @@ nav {
     position: relative;
     height: 20px;
     width: 30px;
-    z-index: 102;
+    z-index: 2;
     cursor: pointer;
   }
 
   .burger.active-burger:before {
-    background: "white";
+    background: "black";
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -1200,7 +1363,7 @@ nav {
   }
 
   .burger.active-burger:after {
-    background: "white";
+    background: "black";
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -1251,12 +1414,11 @@ nav {
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
 
-  .menu__item {
-    margin-top: 15px;
-  }
-
   .menu__item-link {
-    color: white;
+    padding: 25px;
+    display: block;
+    color: black;
+    border-bottom: 1px solid lightgray;
   }
 }
 
