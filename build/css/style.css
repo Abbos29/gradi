@@ -566,12 +566,14 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 500;
 }
 
 .menu details .dropdown-menu {
   position: static !important;
   border-top: 1px solid lightgray;
   background-color: #fff;
+  padding: 0;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,15 +587,17 @@ nav {
   max-width: 100%;
   -webkit-box-shadow: none;
           box-shadow: none;
-  padding: 10px 25px;
 }
 
 .menu details .dropdown-menu h3 {
-  display: none;
+  padding: 0;
+  padding: 10px 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .menu details .dropdown-menu .links {
-  padding: 0;
+  padding: 10px 25px;
   gap: 5px;
   text-transform: uppercase;
 }
@@ -644,6 +648,10 @@ nav {
 
 .burger {
   display: none;
+  cursor: pointer;
+}
+
+.btn-close {
   cursor: pointer;
 }
 
@@ -1418,6 +1426,7 @@ nav {
     padding: 25px;
     display: block;
     color: black;
+    font-weight: 700;
     border-bottom: 1px solid lightgray;
   }
 }
