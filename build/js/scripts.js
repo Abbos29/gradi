@@ -97,14 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Обработчик клика для закрытия details
     document.addEventListener("click", function (event) {
         const target = event.target;
-
+        console.log(target);
+        
         // Проверяем, является ли клик вне details и summary
         if (!target.closest("details") && !target.closest("summary")) {
             // Скрываем все открытые details
             detailsElements.forEach(function (details) {
                 details.removeAttribute("open");
             });
-        } else if (target.tagName === "SUMMARY") {
+        } else if (target.tagName === "SUMMARY" || target.tagName === 'svg' || target.tagName === 'path') {
             // Если кликнули на summary, закрываем все открытые details,
             // кроме того, на который был сделан клик
             detailsElements.forEach(function (details) {
