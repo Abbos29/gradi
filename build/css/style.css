@@ -1307,6 +1307,33 @@ nav {
   text-transform: uppercase;
 }
 
+.category-list .section-top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.category-list__sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-list__sort p {
+  padding-left: 12px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.category-list__sort select {
+  background: none;
+  font-size: 16px;
+  color: #000;
+}
+
 .footer {
   background: #f7f7ff;
   padding: 80px 0;
