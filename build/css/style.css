@@ -141,6 +141,19 @@ button {
   font-family: "Inter", sans-serif;
 }
 
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  border: 1px solid transparent;
+}
+
+input:valid {
+  border: 1px solid #909090;
+}
+
 section {
   padding: 50px 0;
 }
