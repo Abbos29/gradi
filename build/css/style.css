@@ -1378,8 +1378,7 @@ nav {
 }
 
 .product .row {
-  padding: 40px 0 30px;
-  background-color: #F4F5F8;
+  padding: 20px 0 10px;
 }
 
 .product__wrapper {
@@ -1442,6 +1441,10 @@ nav {
   margin-top: 15px;
 }
 
+.product__shops {
+  width: 100%;
+}
+
 .product__price {
   width: 100%;
   display: -webkit-box;
@@ -1453,7 +1456,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 13px 0;
@@ -1473,6 +1476,12 @@ nav {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.product__price img {
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .product__notify {
