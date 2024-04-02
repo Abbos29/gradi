@@ -137,12 +137,14 @@ h6 {
 }
 
 input,
-button {
+button,
+textarea {
   font-family: "Inter", sans-serif;
 }
 
 input:focus,
-button:focus {
+button:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -749,6 +751,7 @@ nav {
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  border: 0px;
 }
 
 .hero__form input:focus {
@@ -1082,6 +1085,7 @@ nav {
   padding-left: 80px;
   max-width: 470px;
   width: 100%;
+  border: 0px !important;
 }
 
 .form__box input:focus {
@@ -1095,6 +1099,7 @@ nav {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 .about-hero {
@@ -1974,6 +1979,245 @@ nav {
   margin-top: 50px;
 }
 
+.get-1::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  width: 30%;
+  height: 100dvh;
+  background-color: #333333;
+  top: 0;
+  right: 0;
+}
+
+.get-2::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  width: 45%;
+  height: 100dvh;
+  background-image: url(../img/get-2-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  right: 0;
+}
+
+.get-2 .get__wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.get {
+  position: relative;
+  /* .get__logo */
+  /* .get__wrapper */
+  /* .get__box */
+  /* .get__footer */
+  /* .get__map */
+  /* .get__inner */
+}
+
+.get__logo {
+  max-width: 140px;
+  width: 100%;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.get__wrapper {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: minmax(350px, 1fr) minmax(300px, 1fr);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 40px;
+}
+
+.get__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.get__box form {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.get__box form input,
+.get__box form textarea {
+  font-family: "Poppins", sans-serif;
+  padding: 12px 18px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.4px;
+}
+
+.get__box form input::-webkit-input-placeholder, .get__box form textarea::-webkit-input-placeholder {
+  color: #828282;
+}
+
+.get__box form input::-moz-placeholder, .get__box form textarea::-moz-placeholder {
+  color: #828282;
+}
+
+.get__box form input:-ms-input-placeholder, .get__box form textarea:-ms-input-placeholder {
+  color: #828282;
+}
+
+.get__box form input::-ms-input-placeholder, .get__box form textarea::-ms-input-placeholder {
+  color: #828282;
+}
+
+.get__box form input::placeholder,
+.get__box form textarea::placeholder {
+  color: #828282;
+}
+
+.get__box form button {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  background-color: #ba3620;
+}
+
+.get__box h1 {
+  font-weight: 700;
+  font-size: 54px;
+}
+
+.get__box h1 span {
+  color: #ba3620;
+}
+
+.get__box p {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.get__footer {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.get__footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.get__footer .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.get__footer .col a {
+  color: #ba3620;
+}
+
+.get__map img {
+  width: 100%;
+}
+
+.get__inner {
+  background-color: rgba(173, 49, 27, 0.4);
+  padding: 25px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid lightgray;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 30px;
+  margin-left: 25%;
+}
+
+.get__inner h3 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.get__inner .row {
+  background-color: #fff;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 14px;
+  border-radius: 20px;
+  max-width: 280px;
+  position: relative;
+  left: 180px;
+}
+
+.get__inner .row p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.get__inner .icon1 {
+  width: 40px;
+}
+
+.get__inner .icon2 {
+  width: 80px;
+  position: relative;
+  top: -50px;
+  left: -50px;
+}
+
 .footer {
   background: #f7f7ff;
   padding: 80px 0;
@@ -2098,6 +2342,18 @@ nav {
   opacity: 0.5;
 }
 
+@media (max-width: 1400px) {
+  .get__inner {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .get__inner {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar .logo {
     margin: 0 auto;
@@ -2195,6 +2451,14 @@ nav {
     line-height: 28px;
     display: block;
     padding-top: 31px;
+  }
+
+  .get-2::after {
+    background-image: none;
+  }
+
+  .get-2 .get__wrapper {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2473,6 +2737,14 @@ nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .get__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .get__box h1 {
+    font-size: 38px;
+  }
 }
 
 @media (max-width: 768px) and (max-width: 480px) {
@@ -2593,6 +2865,24 @@ nav {
 
   .reviews__wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .get__box {
+    gap: 10px;
+  }
+
+  .get__box h1 {
+    font-size: 28px;
+  }
+
+  .get__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .footer__wrapper {
