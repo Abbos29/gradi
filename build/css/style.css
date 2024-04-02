@@ -956,6 +956,52 @@ nav {
   display: none;
 }
 
+.pags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.pags__btn {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: 70px;
+  background: none;
+  color: #000;
+}
+
+.pags__btn:hover,
+.pags__btn.active {
+  border: 1px solid #ba3620;
+  color: #ba3620;
+}
+
+.pags__btn.deactive {
+  color: lightgray;
+  background: gray;
+}
+
 .tips {
   /* .tips__wrapper */
   /* .tips__item */
@@ -2876,7 +2922,7 @@ nav {
   }
 
   .get__box form textarea {
-    height: 150px;
+    height: 100px;
   }
 
   .get__box h1 {
