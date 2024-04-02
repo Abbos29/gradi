@@ -2453,6 +2453,10 @@ nav {
     padding-top: 31px;
   }
 
+  .get-1::after {
+    background-color: transparent;
+  }
+
   .get-2::after {
     background-image: none;
   }
@@ -2869,6 +2873,10 @@ nav {
 
   .get__box {
     gap: 10px;
+  }
+
+  .get__box form textarea {
+    height: 150px;
   }
 
   .get__box h1 {
