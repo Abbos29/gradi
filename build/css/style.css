@@ -2893,6 +2893,10 @@ nav {
             align-items: flex-start;
   }
 
+  .get__map iframe {
+    height: 400px;
+  }
+
   .footer__wrapper {
     grid-template-columns: 1fr;
     padding: 40px 0;
