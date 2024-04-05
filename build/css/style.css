@@ -2097,7 +2097,13 @@ nav {
           align-items: center;
 }
 
+.get-4 .get__inner {
+  position: relative;
+  top: 40px;
+}
+
 .get {
+  padding-top: 130px;
   position: relative;
   /* .get__logo */
   /* .get__wrapper */
@@ -2113,6 +2119,8 @@ nav {
   height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  top: -70px;
 }
 
 .get__wrapper {
@@ -2401,9 +2409,21 @@ nav {
 }
 
 .terms__wrapper p {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1.5;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+}
+
+.terms__wrapper ol {
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
 }
 
 .footer {
