@@ -69,6 +69,10 @@ const whoSwiper = new Swiper('.who__swiper', {
 
     loop: true,
 
+    autoplay: {
+        delay: 3000,
+      },
+
     // initialSlide: 3,
     // centeredSlides: true,
     grabCursor: true,
